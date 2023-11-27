@@ -1,0 +1,84 @@
+html {
+  background: #fafafa;
+  color: #19171c;
+}
+body {
+  font-family: system-ui;
+}
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.menu {
+  align-items: center;
+  display: grid;
+  gap: 0 8px;
+  grid-template-areas:
+    "logo trigger"
+    "links links";
+  justify-content: space-between;
+}
+
+.card-container {
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  display: grid;
+}
+
+.navigation-card {
+  background-color: #edf0f3;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #00000014, 0 1px 2px #0000000f, 0 1px 4px #00000024;
+  display: inline-block;
+  margin: 0;
+  padding: 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation-card:hover {
+  background-color: rgba(198, 224, 235, 0.891);
+}
+
+.navigation-card-content {
+  word-wrap: break-word;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.description {
+  display: none;
+  padding: 15px 30px;
+  background-color: #fff;
+  transition: 0s;
+}
+div.title.active + .description {
+  display: block;
+  border-bottom: solid 1px rgb(137, 137, 137);
+}
+
+div.title {
+  padding: 15px 10px;
+  border-bottom: solid 1px rgb(137, 137, 137);
+  cursor: pointer;
+  font-weight: 600;
+}
+div.title:hover,
+div.title.active {
+  background-color: #fff;
+}
+div.title.active:hover {
+  background-color: #fafafa;
+}
+div.title.active {
+  border-bottom: none;
+}
